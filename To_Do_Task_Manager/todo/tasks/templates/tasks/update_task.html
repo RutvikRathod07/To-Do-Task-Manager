@@ -1,0 +1,25 @@
+{% extends "tasks/base.html" %}
+{% block title %}
+Update task
+{% endblock %}
+{% block content %}
+  <div class="row h-50 d-flex justify-content-center">
+      <h3  >Update Task</h3>
+      <div class="col-sm-12 h-100 d-table">
+          <div class="card card-block d-table-cell ">
+<form method="POST" action="">
+	{% csrf_token %}
+    <div class="my-3">Task : {{form.title}}</div>
+    <div class="my-3">Completed : {{form.complete}}</div>
+    <input type="submit" name="Update Task" class="btn btn-primary">
+</form>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
+
+
